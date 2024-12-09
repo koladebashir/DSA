@@ -3,7 +3,7 @@ def binary_search(list, item):
     high = len(list) - 1
 
     while low <= high:
-        mid = (low + high)
+        mid = (low + high) // 2
         guess = list[mid]
 
         if guess == item:
@@ -13,9 +13,11 @@ def binary_search(list, item):
         else:
             high = mid - 1
         
-    return None
+    return None 
 
 list = [1, 2, 3, 4, 5, 6]
+
+# Test cases
 print(binary_search(list, 2))
 print(binary_search(list, 6))
 print(binary_search(list, -1))
